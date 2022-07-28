@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+  </head>
+  <body>
+    <h1>Deployed-form</h1>
+    <input value="name" id="name" placeholder="Enter the name" />
+    <br />
+    <br />
+    <input value="age" id="age" placeholder="Enter your age" />
+    <br />
+    <br />
+    <button type="submit" onclick="store()">Submit</button>
+  </body>
+
+  <script>
+    function store() {
+      var name = document.getElementById("name");
+      var age = document.getElementById("age");
+      localStorage.setItem("name", name.value);
+      localStorage.setItem("age", age.value);
+    }
+  </script>
+</html>
